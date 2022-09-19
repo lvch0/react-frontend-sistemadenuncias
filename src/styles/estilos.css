@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+
+.datosStyle {
+    margin-top: 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-form {
+    margin-top: 7vw;
+}
