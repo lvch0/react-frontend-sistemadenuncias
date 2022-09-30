@@ -35,7 +35,7 @@ export const PasswordTextField = () => {
 
     return (
         <div>
-            <FormControl sx={{ width: '25ch' }} variant="outlined">
+            <FormControl fullWidth variant="outlined">
                 <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
                 <OutlinedInput
                     id="outlined-adornment-password"

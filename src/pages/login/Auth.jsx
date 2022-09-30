@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack'
 import Button from '@mui/material/Button'
@@ -26,7 +26,7 @@ export const Auth = () => {
     })
 
     return (
-        <div className='container'>
+        <>
             <form onSubmit={formik.handleSubmit}>
                 <Stack
                     sx={{ width: "25ch" }}
@@ -63,6 +63,9 @@ export const Auth = () => {
                     </Button>
                 </Stack>
             </form>
-        </div>
+        </>
     )
 }
+
+
+
