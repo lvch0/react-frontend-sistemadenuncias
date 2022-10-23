@@ -4,9 +4,13 @@ import ArticleIcon from "@mui/icons-material/Article";
 import ContentPasteSearchTwoToneIcon from "@mui/icons-material/ContentPasteSearchTwoTone";
 import FindInPageIcon from "@mui/icons-material/FindInPage";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
-import LogoutIcon from '@mui/icons-material/Logout';
+import LogoutIcon from "@mui/icons-material/Logout";
+import { Outlet, Link, useLocation } from "react-router-dom";
 
 function SideBar() {
+  const location = useLocation()
+  const url = location.pathname
+  console.log(location)
   return (
     <div className="sidebar">
       <div className="top">
@@ -20,34 +24,34 @@ function SideBar() {
       <div className="center">
         <ul>
           <li>
-            <HomeIcon className="icons"/>
+            <HomeIcon className="icons" />
             <span>Inicio</span>
           </li>
           <li>
-            <ArticleIcon className="icons"/>
+            <ArticleIcon className="icons" />
             <span>Formulario</span>
           </li>
           <li>
-            <FindInPageIcon className="icons"/>
+            <FindInPageIcon className="icons" />
             <span>Seguimiento</span>
           </li>
           <li>
-            <PeopleAltIcon className="icons"/>
+            <PeopleAltIcon className="icons" />
             <span>Usuarios</span>
           </li>
           <li>
-            <ContentPasteSearchTwoToneIcon className="icons"/>
+            <ContentPasteSearchTwoToneIcon className="icons" />
             <span>Expedientes</span>
           </li>
           <li>
-            <LogoutIcon className="icons"/>
+            <LogoutIcon className="icons" />
             <span>Cerrar Sesión</span>
           </li>
         </ul>
 
         <div className="bottom">
-            <div className="colorOption"></div>
-            <div className="colorOption"></div>
+          <div className="colorOption"></div>
+          <div className="colorOption"></div>
         </div>
       </div>
 
