@@ -4,7 +4,7 @@ import Navbar from "../../components/nav-bar/NavBar";
 import Sidebar from "../../components/side-bar/SideBar";
 import "./users.scss";
 
-function Users() {  
+function Users() {
   return (
     <div className="user-list">
       <Sidebar />
