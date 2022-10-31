@@ -13,12 +13,6 @@ const { BrowserRouter, Routes, Route } = require("react-router-dom")
 function App() {
   return (
     <>
-      {/* <Home/>
-      {/* <Login/> */}
-      {/* <Auth/>      */}
-      {/* <LoginPage/> */}
-      {/* <Login/> */}
-      {/* <FormPage></FormPage> */}
       <BrowserRouter>
         <Routes>
           <Route path="/">

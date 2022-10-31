@@ -1,53 +1,69 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import Select from '@mui/material/Select';
+import Select from "@mui/material/Select";
 import { FormControl, InputLabel } from "@mui/material";
 import { DesktopDatePicker } from "@mui/x-date-pickers";
 import dayjs from "dayjs";
 
 export default function Form() {
-    const [value, setValue] = React.useState(dayjs('2014-08-18T21:11:54'));
+  const [value, setValue] = React.useState(dayjs("2014-08-18T21:11:54"));
 
-    const handleChange = (newValue) => {
-      setValue(newValue);
-    };
-  
-    // const [valueContr, setValueContr] = React.useState('Controlled');
-  
-    // const handleChangeContr = (event) => {
-    //   setValue(event.target.valueContr);
-    // };
-  
-    return (
-      <>
-        <form>
-          <FormControl sx={{ m: 1, width: 500 }}>
-            <InputLabel htmlFor="grouped-native-select">ASUNTOS</InputLabel>
-            <Select native defaultValue="" id="grouped-native-select" label="asuntos">
-              <option aria-label="None" value="" />
-              <optgroup label="Fiscalización de Seguridad y Contaminación Urbana">
-                <option value={1}>Ruidos Molestos</option>
-                <option value={2}>Quema</option>
-                <option value={3}>Residuos/Cacharros</option>
-                <option value={4}>Aguas Servidas y Líquidos Cloacales</option>
-                <option value={5}>Malezas</option>
-                <option value={6}>Animales</option>
-                <option value={7}>Local sin Habilitación</option>
-                <option value={8}>Aguas Estancadas</option>
-                <option value={9}>Filtraciones</option>
-                <option value={0}>Pozos Negros/Pozos Sépticos/Letrinas</option>
-              </optgroup>
-              <optgroup label="Control Bromatológico">
-                <option value={1}>Control Bromatológico</option>
-              </optgroup>
-              <optgroup label="Laboratorio Bromatología">
-                <option value={1}>Productos Alimenticios no aptos para consumo/comercialización</option>
-              </optgroup>
-            </Select>
-          </FormControl>
-  
-          <DesktopDatePicker
+  const handleChange = (newValue) => {
+    setValue(newValue);
+  };
+
+  // const [valueContr, setValueContr] = React.useState('Controlled');
+
+  // const handleChangeContr = (event) => {
+  //   setValue(event.target.valueContr);
+  // };
+
+  return (
+    <>
+      <form>
+        <FormControl
+          sx={{
+            display: "block",
+            justifyContent: "center",
+            alignItems: "center",
+            m: "auto",
+            marginTop: 10,
+            width: 500,
+          }}
+        >
+          <InputLabel htmlFor="grouped-native-select">ASUNTOS</InputLabel>
+          <Select
+            native
+            defaultValue=""
+            id="grouped-native-select"
+            label="asuntos"
+          >
+            <option aria-label="None" value="" />
+            <optgroup label="Fiscalización de Seguridad y Contaminación Urbana">
+              <option value={1}>Ruidos Molestos</option>
+              <option value={2}>Quema</option>
+              <option value={3}>Residuos/Cacharros</option>
+              <option value={4}>Aguas Servidas y Líquidos Cloacales</option>
+              <option value={5}>Malezas</option>
+              <option value={6}>Animales</option>
+              <option value={7}>Local sin Habilitación</option>
+              <option value={8}>Aguas Estancadas</option>
+              <option value={9}>Filtraciones</option>
+              <option value={0}>Pozos Negros/Pozos Sépticos/Letrinas</option>
+            </optgroup>
+            <optgroup label="Control Bromatológico">
+              <option value={1}>Control Bromatológico</option>
+            </optgroup>
+            <optgroup label="Laboratorio Bromatología">
+              <option value={1}>
+                Productos Alimenticios no aptos para consumo/comercialización
+              </option>
+            </optgroup>
+          </Select>
+        </FormControl>
+
+        {/* <DesktopDatePicker
             label="Date desktop"
             inputFormat="MM/DD/YYYY"
             value={value}
@@ -159,8 +175,8 @@ export default function Form() {
               <option value={3}>Dirección de Laboratorio de Bromatología</option>
               <option value={4}>Otras Direcciones</option>
             </Select>
-          </FormControl>
-        </form>
-      </>
-    );
-  };
+          </FormControl> */}
+      </form>
+    </>
+  );
+}
