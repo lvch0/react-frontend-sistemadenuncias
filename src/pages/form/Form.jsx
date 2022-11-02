@@ -5,6 +5,7 @@ import Select from "@mui/material/Select";
 import { FormControl, InputLabel } from "@mui/material";
 import { DesktopDatePicker } from "@mui/x-date-pickers";
 import dayjs from "dayjs";
+import Grid from "@mui/material/Grid";
 
 export default function Form() {
   const [value, setValue] = React.useState(dayjs("2014-08-18T21:11:54"));
@@ -21,7 +22,7 @@ export default function Form() {
 
   return (
     <>
-      <form>
+      <form className="formu">
         <FormControl
           sx={{
             display: "block",
@@ -29,7 +30,7 @@ export default function Form() {
             alignItems: "center",
             m: "auto",
             marginTop: 10,
-            width: 500,
+            width: 350,
           }}
         >
           <InputLabel htmlFor="grouped-native-select">ASUNTOS</InputLabel>
@@ -62,120 +63,238 @@ export default function Form() {
             </optgroup>
           </Select>
         </FormControl>
-
-        {/* <DesktopDatePicker
-            label="Date desktop"
-            inputFormat="MM/DD/YYYY"
-            value={value}
-            onChange={handleChange}
-            renderInput={(params) => <TextField {...params} />}
+        <FormControl
+          sx={{
+            display: "block",
+            justifyContent: "center",
+            alignItems: "center",
+            m: "auto",
+            marginTop: 10,
+            padding: "auto",
+            width: 350,
+          }}
+        >
+          <InputLabel htmlFor="grouped-native-select">PROCEDENCIA</InputLabel>
+          <Select
+            native
+            defaultValue=""
+            id="grouped-native-select"
+            label="procedencia"
+          >
+            <option aria-label="None" value="" />
+            <option value={1}>Call Center</option>
+            <option value={2}>Presencial</option>
+            <option value={3}>Expediente</option>
+            <option value={4}>Notas de otra Dirección</option>
+          </Select>
+        </FormControl>
+        <FormControl
+          sx={{
+            display: "block",
+            justifyContent: "center",
+            alignItems: "center",
+            m: "auto",
+            marginTop: 10,
+            padding: "auto",
+            width: 250,
+          }}
+        >
+          <TextField fullWidth label="NOMBRE/DENUNCIANTE" id="fullWidth" />
+        </FormControl>
+        <FormControl
+          sx={{
+            display: "block",
+            justifyContent: "center",
+            alignItems: "center",
+            m: "auto",
+            marginTop: 10,
+            padding: "auto",
+            width: 250,
+          }}
+        >
+          <TextField
+            hiddenLabel
+            fullWidth
+            label="APELLIDO/DENUNCIANTE"
+            id="fullWidth"
           />
-          <FormControl sx={{ m: 1, width: 500 }}>
-            <InputLabel htmlFor="grouped-native-select">PROCEDENCIA</InputLabel>
-            <Select native defaultValue="" id="grouped-native-select" label="procedencia">
-              <option aria-label="None" value="" />
-              <option value={1}>Call Center</option>
-              <option value={2}>Presencial</option>
-              <option value={3}>Expediente</option>
-              <option value={4}>Notas de otra Dirección</option>
-            </Select>
-          </FormControl>
-          <Box
-            mt={3}
-            sx={{
-              width: 500,
-              maxWidth: "100%",
-            }}
-          >
-            <TextField
-              fullWidth
-              label="INICIADOR/SOLICITANTE"
-              id="fullWidth"
-            />
-          </Box>
-  
-          <Box
-            mt={3}
-            sx={{
-              width: 500,
-              maxWidth: "100%",
-            }}
-          >
-            <TextField
-              fullWidth
-              label="TELÉFONO DEL SOLICITANTE"
-              id="fullWidth"
-            />
-          </Box>
-  
+        </FormControl>
+        <FormControl
+          sx={{
+            display: "block",
+            justifyContent: "center",
+            alignItems: "center",
+            m: "auto",
+            marginTop: 10,
+            padding: "auto",
+            width: 250,
+          }}
+        >
+          <TextField fullWidth label="DNI/DENUNCIANTE" id="fullWidth" />
+        </FormControl>
+        <FormControl
+          sx={{
+            display: "block",
+            justifyContent: "center",
+            alignItems: "center",
+            m: "auto",
+            marginTop: 10,
+            padding: "auto",
+            width: 250,
+          }}
+        >
+          <TextField
+            hiddenLabel
+            fullWidth
+            label="TELÉFONO/DENUNCIANTE"
+            id="fullWidth"
+          />
+        </FormControl>
+        <FormControl
+          sx={{
+            display: "block",
+            justifyContent: "center",
+            alignItems: "center",
+            m: "auto",
+            marginTop: 10,
+            padding: "auto",
+            width: 250,
+          }}
+        >
+          <TextField fullWidth label="EMAIL/DENUNCIANTE" id="fullWidth" />
+        </FormControl>
+        <FormControl>
           <Box
             component="form"
             sx={{
-              '& > :not(style)': { m: 1, width: '30ch' },
+              "& > :not(style)": { m: 1, width: "30ch" },
             }}
             noValidate
             autoComplete="off"
           >
-            <TextField id="outlined-basic" label="CALLE" variant="outlined" />
-            <TextField id="outlined-basic" label="NUMERACIÓN" variant="outlined" />
             <TextField id="outlined-basic" label="BARRIO" variant="outlined" />
-            <TextField id="outlined-basic" label="CALLES DE REFERENCIA" variant="outlined" />
+            <TextField id="outlined-basic" label="CHACRA" variant="outlined" />
+            <TextField id="outlined-basic" label="CALLE" variant="outlined" />
           </Box>
-  
-          <Box
-            mt={3}
-            sx={{
-              width: 500,
-              maxWidth: "100%",
-            }}
-          >
-            <TextField
-              id="outlined-multiline-flexible"
-              label="DATOS DEL DENUNCIADO"
-              multiline
-              maxRows={4}
-            />
-          </Box>
-  
+        </FormControl>
+        <FormControl>
           <Box
             component="form"
             sx={{
-              '& > :not(style)': { m: 1, width: '30ch' },
+              "& > :not(style)": { m: 1, width: "30ch" },
             }}
             noValidate
-            autoComplete="off"
-          >
-            <TextField id="outlined-basic" label="CALLE" variant="outlined" />
-            <TextField id="outlined-basic" label="NUMERACIÓN" variant="outlined" />
-            <TextField id="outlined-basic" label="BARRIO" variant="outlined" />
-            <TextField id="outlined-basic" label="CALLES DE REFERENCIA" variant="outlined" />
-          </Box>
-  
-          <Box
-            mt={3}
-            sx={{
-              width: 500,
-              maxWidth: "100%",
-            }}
+            autoComplete="on"
           >
             <TextField
+              id="outlined-basic"
+              label="NUMERACIÓN"
+              variant="outlined"
+            />
+            <TextField
+              id="outlined-basic"
+              label="1° CALLE DE REFERENCIA"
+              variant="outlined"
+            />
+            <TextField
+              id="outlined-basic"
+              label="2° CALLE DE REFERENCIA"
+              variant="outlined"
+            />
+          </Box>
+        </FormControl>
+        <FormControl>
+          <Box
+            component="form"
+            sx={{
+              "& > :not(style)": { m: 1, width: "30ch" },
+            }}
+            noValidate
+            autoComplete="on"
+          >
+            <TextField id="outlined-basic" label="CALLE" variant="outlined" />
+            <TextField
+              id="outlined-basic"
+              label="NUMERACIÓN"
+              variant="outlined"
+            />
+            <TextField
+              id="outlined-basic"
+              label="EDIFICIO"
+              variant="outlined"
+            />
+          </Box>
+        </FormControl>
+        <FormControl>
+          <Box
+            component="form"
+            sx={{
+              "& > :not(style)": { m: 1, width: "30ch" },
+            }}
+            noValidate
+            autoComplete="on"
+          >
+            <TextField id="outlined-basic" label="PISO" variant="outlined" />
+            <TextField id="outlined-basic" label="BARRIO" variant="outlined" />
+            <TextField
               id="outlined-multiline-flexible"
-              label="BREVE DESCRIPCIÓN DE LA DENUNCIA"
+              label="DESCRIPCIÓN"
               multiline
               maxRows={4}
             />
           </Box>
-  
-          <FormControl sx={{ m: 1, width: 500 }}>
-            <InputLabel htmlFor="grouped-native-select">PROCEDENCIA</InputLabel>
-            <Select native defaultValue="" id="grouped-native-select" label="procedencia">
-              <option aria-label="None" value="" />
-              <option value={1}>Dirección de Fiscalización de Seguridad y Contaminación Urbana</option>
-              <option value={2}>Dirección de Control Bromatológico</option>
-              <option value={3}>Dirección de Laboratorio de Bromatología</option>
-              <option value={4}>Otras Direcciones</option>
-            </Select>
-          </FormControl> */}
+        </FormControl>
+        //!Datos del denunciado
+        <FormControl>
+          <Box
+            component="form"
+            sx={{
+              "& > :not(style)": { m: 1, width: "30ch" },
+            }}
+            noValidate
+            autoComplete="on"
+          >
+            <TextField id="outlined-basic" label="NOMBRE" variant="outlined" />
+            <TextField
+              id="outlined-basic"
+              label="APELLIDO"
+              variant="outlined"
+            />
+            <TextField id="outlined-basic" label="APODO" variant="outlined" />
+          </Box>
+        </FormControl>
+        <FormControl>
+        <Box
+            component="form"
+            sx={{
+              "& > :not(style)": { m: 1, width: "30ch" },
+            }}
+            noValidate
+            autoComplete="on"
+          >
+            <TextField
+              id="outlined-multiline-flexible"
+              label="DESCRIPCIÓN DE LA UBICACIÓN"
+              multiline
+              maxRows={4}
+            />
+            <TextField
+              id="outlined-multiline-flexible"
+              label="DESCRIPCIÓN DEL DENUNCIADO"
+              multiline
+              maxRows={4}
+            />
+          </Box>
+        </FormControl>
+
+        <FormControl>
+        <TextField
+              id="outlined-multiline-flexible"
+              label="ESTADO DE LA DENUNCIA"
+              multiline   
+              maxRows={4}
+            />
+        </FormControl>
       </form>
     </>
   );
