@@ -11,6 +11,7 @@ function SideBar() {
   const location = useLocation()
   const url = location.pathname
   console.log(location)
+  
   return (
     <div className="sidebar">
       <div className="top">
@@ -24,27 +25,27 @@ function SideBar() {
       <div className="center">
         <ul>
           <li>
-            <HomeIcon className="icons" />
+            <HomeIcon className="icons" color="disabled"/>
             <span>Inicio</span>
           </li>
           <li>
-            <ArticleIcon className="icons" />
+            <ArticleIcon className="icons" color="disabled"/>
             <span>Formulario</span>
           </li>
           <li>
-            <FindInPageIcon className="icons" />
+            <FindInPageIcon className="icons" color="disabled"/>
             <span>Seguimiento</span>
           </li>
           <li>
-            <PeopleAltIcon className="icons" />
+            <PeopleAltIcon className="icons" color="disabled"/>
             <span>Usuarios</span>
           </li>
           <li>
-            <ContentPasteSearchTwoToneIcon className="icons" />
+            <ContentPasteSearchTwoToneIcon className="icons" color="disabled"/>
             <span>Expedientes</span>
           </li>
           <li>
-            <LogoutIcon className="icons" />
+            <LogoutIcon className="icons" color="disabled"/>
             <span>Cerrar Sesión</span>
           </li>
         </ul>
