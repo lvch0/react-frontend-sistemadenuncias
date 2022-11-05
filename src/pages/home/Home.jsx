@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import Navbar from "../../components/nav-bar/NavBar";
 import SideBar from "../../components/side-bar/SideBar";
 import "./home.scss";
@@ -7,7 +8,10 @@ function Home() {
     <div className="home">
       <SideBar />
       <div className="homeContainer">
-        <Navbar/>
+        <Navbar />
+        <div className="outletContainer">
+          <Outlet />
+        </div>
       </div>
     </div>
   );

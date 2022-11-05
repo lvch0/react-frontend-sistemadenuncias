@@ -1,7 +1,9 @@
 .home {
+  width: 100%;
   display: flex;
 
-  .homeContainer {
-    flex: 5;
+    .outletContainer {
+      width: 82vw;
+      height: 89%;
+    }
   }
-}

@@ -25,9 +25,8 @@ function App() {
               <Route path="new" element={<New />} />
             </Route>
 
-            <Route path="form">
+            <Route path="form" element={<Home />}>
               <Route index element={<Form />} />
-              <Route path="new" element={<New />} />
             </Route>
           </Route>
         </Routes>

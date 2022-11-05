@@ -22,7 +22,7 @@ export default function Form() {
   // };
 
   return (
-    <>
+    <div className="form">
       <h1 className="formTitle">Formulario de Denuncias</h1>
       <form className="formContainer">
         <div className="formHeader">
@@ -515,6 +515,6 @@ export default function Form() {
           </FormControl>
         </div>
       </form>
-    </>
+    </div>
   );
 }

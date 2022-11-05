@@ -1,4 +1,4 @@
-.sidebar {
+.layout {
     flex: 1;
     border-right: 0.5px solid lightgray;
     min-height: 100vh;
@@ -77,4 +77,13 @@
         color: white;
         text-decoration: none;
     }
+    
+}
+
+.layoutIndex {
+    width: 75%;
+    padding: 2.5rem;
+    background-color: white;
+    height: 100vw;
+    overflow: scroll;
 }

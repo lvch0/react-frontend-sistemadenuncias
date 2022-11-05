@@ -1,4 +1,5 @@
-import "./sideBar.scss";
+import React from "react";
+import "./layout.scss";
 import HomeIcon from "@mui/icons-material/Home";
 import ArticleIcon from "@mui/icons-material/Article";
 import ContentPasteSearchTwoToneIcon from "@mui/icons-material/ContentPasteSearchTwoTone";
@@ -7,16 +8,16 @@ import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { Outlet, Link, useLocation } from "react-router-dom";
 
-function SideBar() {
+function Layout() {
   const location = useLocation();
   const urlActual = location.pathname;
   console.log(location);
 
   return (
-    <div className="sidebar">
+    <div className="layout">
       <div className="top">
         <span className="logo">
-          <img src="../../assets/images/005.png" width={140} height={80} />
+          <img src="../../assets/images/005.png" width={80} height={800} />
         </span>
       </div>
       <hr />
@@ -76,8 +77,11 @@ function SideBar() {
         </div>
       </div>
 
+      <div className="layoutIndex">
+        <Outlet />
+      </div>
     </div>
   );
 }
 
-export default SideBar;
+export default Layout;
