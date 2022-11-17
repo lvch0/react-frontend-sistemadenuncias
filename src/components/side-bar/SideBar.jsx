@@ -6,12 +6,12 @@ import FindInPageIcon from "@mui/icons-material/FindInPage";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { Outlet, Link, useLocation } from "react-router-dom";
-import img from "../../assets/images/007.png"
+import img from "../../assets/images/007.png";
 
 function SideBar() {
-  const location = useLocation()
-  const url = location.pathname
-  console.log(location)
+  const location = useLocation();
+  const url = location.pathname;
+  console.log(location);
   return (
     <div className="sidebar">
       <div className="top">
@@ -26,27 +26,39 @@ function SideBar() {
         <ul>
           <li>
             <HomeIcon className="icons" />
-            <span>Inicio</span>
+            <span>
+              <Link to="/home">Inicio</Link>
+            </span>
           </li>
           <li>
             <ArticleIcon className="icons" />
-            <span>Formulario</span>
+            <span>
+              <Link to="/form">Formulario</Link>
+            </span>
           </li>
           <li>
             <FindInPageIcon className="icons" />
-            <span>Seguimiento</span>
+            <span>
+            <Link to="/files">Seguimiento</Link>
+            </span>
           </li>
           <li>
             <PeopleAltIcon className="icons" />
-            <span>Usuarios</span>
+            <span>
+            <Link to="/users">Usuarios</Link>
+            </span>
           </li>
           <li>
             <ContentPasteSearchTwoToneIcon className="icons" />
-            <span>Expedientes</span>
+            <span>
+            <Link to="/files">Expedientes</Link>
+            </span>
           </li>
           <li>
             <LogoutIcon className="icons" />
-            <span>Cerrar Sesión</span>
+            <span>
+            <Link to="/">Cerrar Sesión</Link>
+            </span>
           </li>
         </ul>
 
