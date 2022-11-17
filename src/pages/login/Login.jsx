@@ -3,6 +3,8 @@ import { Stack, Grid, Paper, TextField, Button } from "@mui/material"
 import { PasswordTextField } from "../../components/password-text-field/PasswordTextField"
 import { useFormik } from 'formik';
 import * as yup from 'yup'
+import img from "../../assets/images/005.png"
+import "./login.scss"
 
 
 function Login() {
@@ -27,11 +29,11 @@ function Login() {
     })
 
     return (
-        <>
+        <div className="login">
             <form onSubmit={formik.handleSubmit}>
                 <Paper elevation={10} style={paperStyle}>
                     <Grid align='center'>
-                        <img src="../../assets/images/005.png" />
+                        <img src={img} width={220} height={120}/>
                         <h2>Inicio de Sesión</h2>
                     </Grid>
                     <Stack
@@ -72,7 +74,7 @@ function Login() {
                     </Stack>
                 </Paper>
             </form>
-        </>
+        </div>
     )
 }
 

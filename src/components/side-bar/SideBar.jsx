@@ -24,40 +24,40 @@ function SideBar() {
 
       <div className="center">
         <ul>
-          <li>
+          <li className="link">
             <HomeIcon className="icons" />
             <span>
-              <Link to="/home">Inicio</Link>
+              <Link className="link" to="/home" style={{textDecoration: "none"}}>Inicio</Link>
             </span>
           </li>
-          <li>
+          <li className="link">
             <ArticleIcon className="icons" />
             <span>
-              <Link to="/form">Formulario</Link>
+              <Link className="link" to="/form" style={{textDecoration: "none"}}>Formulario</Link>
             </span>
           </li>
-          <li>
+          <li className="link">
             <FindInPageIcon className="icons" />
             <span>
-            <Link to="/files">Seguimiento</Link>
+            <Link className="link" to="/files" style={{textDecoration: "none"}}>Seguimiento</Link>
             </span>
           </li>
-          <li>
+          <li className="link">
             <PeopleAltIcon className="icons" />
             <span>
-            <Link to="/users">Usuarios</Link>
+            <Link className="link" to="/users" style={{textDecoration: "none"}}>Usuarios</Link>
             </span>
           </li>
-          <li>
+          <li className="link">
             <ContentPasteSearchTwoToneIcon className="icons" />
             <span>
-            <Link to="/files">Expedientes</Link>
+            <Link className="link" to="/files" style={{textDecoration: "none"}}>Expedientes</Link>
             </span>
           </li>
-          <li>
+          <li className="link">
             <LogoutIcon className="icons" />
             <span>
-            <Link to="/">Cerrar Sesión</Link>
+            <Link className="link" to="/" style={{textDecoration: "none"}}>Cerrar Sesión</Link>
             </span>
           </li>
         </ul>

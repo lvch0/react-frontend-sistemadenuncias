@@ -6,7 +6,6 @@ import Single from "./pages/single/Single"
 import New from "./pages/new-user/New"
 import Form from "./pages/form/Form"
 import Datatable from "./components/datatable/Datatable";
-// import Auth from "./pages/login/Auth"
 // import { Route, Router } from "react-router-dom";
 const { BrowserRouter, Routes, Route } = require("react-router-dom")
 
