@@ -1,0 +1,12 @@
+.container {
+  flex-direction: column;
+  width: 68%;
+  position: relative;
+  left: 40vw;
+  .titleNot {
+    display: flex;
+    position: relative;
+    left: 12vw;
+    align-items: center;
+  }
+}

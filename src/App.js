@@ -6,6 +6,7 @@ import Single from "./pages/single/Single"
 import New from "./pages/new-user/New"
 import Form from "./pages/form/Form"
 import Datatable from "./components/datatable/Datatable";
+import { NotFound } from "./pages/not-found/NotFound";
 // import { Route, Router } from "react-router-dom";
 const { BrowserRouter, Routes, Route } = require("react-router-dom")
 
@@ -27,6 +28,14 @@ function App() {
 
             <Route path="form" element={<Home />}>
               <Route index element={<Form />} />
+            </Route>
+
+            <Route path="files" element={<Home />}>
+              <Route index element={<NotFound />} />
+            </Route>
+
+            <Route path="tracing" element={<Home />}>
+              <Route index element={<NotFound />} />
             </Route>
           </Route>
         </Routes>
