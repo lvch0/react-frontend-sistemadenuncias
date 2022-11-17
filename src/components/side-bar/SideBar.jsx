@@ -6,67 +6,47 @@ import FindInPageIcon from "@mui/icons-material/FindInPage";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { Outlet, Link, useLocation } from "react-router-dom";
+import img from "../../assets/images/007.png"
 
 function SideBar() {
-  const location = useLocation();
-  const urlActual = location.pathname;
-  console.log(location);
-
+  const location = useLocation()
+  const url = location.pathname
+  console.log(location)
   return (
     <div className="sidebar">
       <div className="top">
         <span className="logo">
-          <img src="../../assets/images/005.png" width={140} height={80} />
+          <img src={img} width={220} height={110} />
         </span>
       </div>
+
       <hr />
+
       <div className="center">
         <ul>
           <li>
             <HomeIcon className="icons" />
-            <span>
-              <Link className="link" to="/home">
-                Home
-              </Link>
-            </span>
+            <span>Inicio</span>
           </li>
           <li>
             <ArticleIcon className="icons" />
-            <span>
-              <Link className="link" to="/form">
-                Formulario
-              </Link>
-            </span>
+            <span>Formulario</span>
           </li>
-          {/* <li>
+          <li>
             <FindInPageIcon className="icons" />
-            <span>
-              <Link to="/files">Expedientes</Link>
-            </span>
-          </li> */}
+            <span>Seguimiento</span>
+          </li>
           <li>
             <PeopleAltIcon className="icons" />
-            <span>
-              <Link className="link" to="/users">
-                Usuarios
-              </Link>
-            </span>
+            <span>Usuarios</span>
           </li>
           <li>
             <ContentPasteSearchTwoToneIcon className="icons" />
-            <span>
-              <Link className="link" to="/files">
-                Expedientes
-              </Link>
-            </span>
+            <span>Expedientes</span>
           </li>
           <li>
             <LogoutIcon className="icons" />
-            <span>
-              <Link className="link" to="/home">
-                Cerrar Sesión
-              </Link>
-            </span>
+            <span>Cerrar Sesión</span>
           </li>
         </ul>
 
@@ -76,6 +56,7 @@ function SideBar() {
         </div>
       </div>
 
+      <div className="bottom">color</div>
     </div>
   );
 }
